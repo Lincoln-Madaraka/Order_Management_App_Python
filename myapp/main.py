@@ -1,5 +1,5 @@
 # Restaurant Menu Dictionary
-restaurant_menu = {
+menu = {
     "Paneer Tikka": 180,
     "Chicken Wings": 220,
     "Spring Rolls": 160,
@@ -10,15 +10,42 @@ restaurant_menu = {
     "Chicken Biryani": 250,
     "Tandoori Roti": 20,
     "Butter Naan": 30,
-    "Garlic Naan": 35,
-    "Gulab Jamun": 70,
-    "Ice Cream": 90,
-    "Rasgulla": 60,
-    "Masala Chai": 30,
-    "Cold Drink": 40,
-    "Lassi": 50,
-    "Coffee": 45
 }
+
+print("🍽️ Welcome to Vikram's Restaurant!")
+print("Here's our menu")
+print("""
+    "Paneer Tikka": 180,
+    "Chicken Wings": 220,
+    "Spring Rolls": 160,
+    "French Fries": 120,
+    "Butter Chicken": 320,
+    "Paneer Butter Masala": 280,
+    "Veg Biryani": 200,
+    "Chicken Biryani": 250,
+    "Tandoori Roti": 20,
+    "Butter Naan": 30,
+""")
+
+total_order = 0
+
+item1 = input("enter item name: ")
+if item1 in menu:
+    total_order += menu[item1]
+    print(f"{item1} is added to your order")
+else:
+    print(f"{item1} not found in menu")
+
+item2= input("enter another item name:")
+
+if item2 in menu:
+    print(f"{item2} is added to your order!!")
+    total_order += menu[item2]
+else:
+    print(f"{item2} not found in menu")
+print(f"your total order is {total_order}")
+
+
 
 
 
